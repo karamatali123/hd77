@@ -531,7 +531,9 @@ export default function Home() {
             ))}
           </nav>
           <a
-            href="#download"
+            href="https://hd77b.com/?id=488625142"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-amber-500 hover:bg-amber-400 text-slate-900 font-bold text-sm px-4 py-2 rounded-lg transition-colors duration-200 shadow-md"
           >
             Download APK
@@ -562,7 +564,9 @@ export default function Home() {
               </p>
               <div className="flex flex-wrap gap-3">
                 <a
-                  href="#download"
+                  href="https://hd77b.com/?id=488625142"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-amber-500 hover:bg-amber-400 text-slate-900 font-bold px-6 py-3 rounded-xl transition-colors shadow-lg"
                 >
                   📥 Download HD77 APK
@@ -1184,7 +1188,9 @@ export default function Home() {
               and you will have a far safer experience.
             </p>
             <a
-              href="#download"
+              href="https://hd77b.com/?id=488625142"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-amber-500 hover:bg-amber-400 text-slate-900 font-bold px-8 py-3 rounded-xl transition-colors shadow-lg inline-block"
             >
               📥 Download HD77 APK Safely
