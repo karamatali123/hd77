@@ -329,6 +329,160 @@ const howToWithdrawSchema = {
   ],
 };
 
+const SITE_URL = "https://www.hd77.net.pk";
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "HD77 Game Guide",
+  url: SITE_URL,
+  description:
+    "Complete HD77 game guide for Pakistan — download, gameplay, deposits, withdrawals, and responsible play tips.",
+  inLanguage: "en",
+  publisher: { "@type": "Organization", name: "HD77 Game Guide" },
+};
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "HD77 Game Guide",
+  url: SITE_URL,
+  logo: {
+    "@type": "ImageObject",
+    url: `${SITE_URL}/images/hd22-game.png`,
+    width: 1200,
+    height: 700,
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "customer support",
+    availableLanguage: ["English", "Urdu"],
+  },
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: SITE_URL,
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "HD77 Game Overview",
+      item: `${SITE_URL}/#overview`,
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: "HD77 Download Guide",
+      item: `${SITE_URL}/#download`,
+    },
+    {
+      "@type": "ListItem",
+      position: 4,
+      name: "HD77 Withdrawal Guide",
+      item: `${SITE_URL}/#withdrawal`,
+    },
+    {
+      "@type": "ListItem",
+      position: 5,
+      name: "HD77 FAQ",
+      item: `${SITE_URL}/#faq`,
+    },
+  ],
+};
+
+const softwareAppSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "HD77 Game",
+  operatingSystem: "Android 5.0+, iOS 12.0+",
+  applicationCategory: "GameApplication",
+  description:
+    "HD77 is a prediction-based earning app in Pakistan featuring color prediction, number patterns, mini-slots, and tournaments with JazzCash and Easypaisa support.",
+  downloadUrl: `${SITE_URL}/#download`,
+  fileSize: "100MB",
+  softwareVersion: "2026",
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "PKR",
+    availability: "https://schema.org/InStock",
+  },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.2",
+    ratingCount: "1850",
+    bestRating: "5",
+    worstRating: "1",
+  },
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "HD77 Game Download 2026 — Complete Pakistan Guide",
+  description:
+    "Detailed HD77 game guide for Pakistan: download steps, gameplay, deposits, withdrawals, JazzCash and Easypaisa support, FAQs, and responsible play tips.",
+  image: [
+    `${SITE_URL}/images/hd22-game.png`,
+    `${SITE_URL}/images/hd22game.png`,
+    `${SITE_URL}/images/hd77.jpeg`,
+  ],
+  author: {
+    "@type": "Organization",
+    name: "HD77 Game Guide",
+    url: SITE_URL,
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "HD77 Game Guide",
+    logo: {
+      "@type": "ImageObject",
+      url: `${SITE_URL}/images/hd22-game.png`,
+    },
+  },
+  datePublished: "2026-01-01T00:00:00+05:00",
+  dateModified: "2026-05-13T00:00:00+05:00",
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": SITE_URL,
+  },
+  speakable: {
+    "@type": "SpeakableSpecification",
+    cssSelector: [
+      "#top h1",
+      "#overview h2",
+      "#download h2",
+      "#withdrawal h2",
+      "#faq h2",
+    ],
+  },
+  wordCount: 5000,
+  keywords:
+    "hd77, hd77 game, hd77 apk, hd77 download, hd77 login, hd77 pakistan, hd77 withdrawal, hd77 jazzcash, hd77 easypaisa, hd77 game 2026",
+};
+
+const gameModesListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "HD77 Game Modes",
+  description:
+    "All available game modes in HD77 with difficulty levels, reward ranges, and risk assessment.",
+  numberOfItems: gameModes.length,
+  itemListElement: gameModes.map((mode, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    name: mode.mode,
+    description: `Difficulty: ${mode.difficulty}, Reward: ${mode.reward}, Duration: ${mode.duration}, Risk: ${mode.risk}`,
+  })),
+};
+
 // ─── COMPONENT ────────────────────────────────────────────────────────────────
 
 export default function Home() {
@@ -1094,6 +1248,30 @@ export default function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(howToWithdrawSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareAppSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(gameModesListSchema) }}
       />
     </>
   );
